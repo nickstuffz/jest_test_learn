@@ -31,4 +31,9 @@ const calculator = {
   },
 };
 
-module.exports = { sum, capitalize, reverseString, calculator };
+function ceaserCipher(string, shift) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let stringArray = string.split("");
+}
+
+module.exports = { sum, capitalize, reverseString, calculator, ceaserCipher };

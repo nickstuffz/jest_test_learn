@@ -19,3 +19,8 @@ test("calculator object that has add, subtract, divide, multiply", () => {
   expect(myFuncs.calculator.multiply(2, 5)).toBe(10);
   expect(myFuncs.calculator.divide(2, 5)).toBe(0.4);
 });
+
+test("ceaser cipher function that returns shifted string", () => {
+  expect(myFuncs.ceaserCipher("helloworld", 3)).toBe("khoorzruog");
+  expect(myFuncs.ceaserCipher("Hello World!", 3)).toBe("Khoor Zruog!");
+});
