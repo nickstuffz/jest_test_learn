@@ -32,8 +32,44 @@ const calculator = {
 };
 
 function ceaserCipher(string, shift) {
-  const alphabet = "abcdefghijklmnopqrstuvwxyz";
-  let stringArray = string.split("");
+  const alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+
+  const stringArray = string.split("");
+  const stringArrayShifted = stringArray.map((value) => {
+    let index = alphabet.indexOf(value);
+    let shiftedIndex = (((index + shift) % 26) + 26) % 26;
+
+    return (shiftedValue = alphabet[shiftedIndex]);
+  });
+  const stringShifted = stringArrayShifted.join("");
+  return stringShifted;
 }
 
 module.exports = { sum, capitalize, reverseString, calculator, ceaserCipher };
